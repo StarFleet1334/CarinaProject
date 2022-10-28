@@ -7,15 +7,27 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends AbstractPage {
 
-    @FindBy(xpath = "//*[@id=\"__aer_root__\"]/div/div[3]/div/div/div/div/div/div[2]/div/nav/ul/li[1]/div")
-    private ExtendedWebElement homePageLoginBtn;
+    @FindBy(xpath = "//*[@id=\"ac-gn-link-search\"]")
+    private ExtendedWebElement searchButton;
 
     public HomePage(WebDriver driver) {
         super(driver);
-        setPageURL("https://aliexpress.ru/");
+        setPageURL("https://www.apple.com/");
     }
 
-    public boolean isLoginPresent() {
-        return homePageLoginBtn.isElementPresent();
+
+    public boolean checkSearchButton() {
+        return searchButton.isElementPresent();
     }
+
+
+
+
+    public SearchInsight PopUpSearch() {
+        searchButton.click();
+        return new SearchInsight(getDriver());
+    }
+
+
+
 }

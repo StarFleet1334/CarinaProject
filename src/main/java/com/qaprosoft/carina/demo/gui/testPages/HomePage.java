@@ -10,6 +10,7 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//*[@id=\"ac-gn-link-search\"]")
     private ExtendedWebElement searchButton;
 
+
     public HomePage(WebDriver driver) {
         super(driver);
         setPageURL("https://www.apple.com/");
@@ -21,12 +22,11 @@ public class HomePage extends AbstractPage {
     }
 
 
-
-
     public SearchInsight PopUpSearch() {
         searchButton.click();
         return new SearchInsight(getDriver());
     }
+
 
 
 

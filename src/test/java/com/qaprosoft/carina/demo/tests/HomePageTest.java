@@ -5,11 +5,13 @@ import com.qaprosoft.carina.demo.gui.testPages.HomePage;
 import com.qaprosoft.carina.demo.gui.testPages.SearchInsight;
 import org.testng.annotations.Test;
 
+
+
 import static org.testng.Assert.assertTrue;
 
 public class HomePageTest extends AbstractTest {
 
-
+    // Works
     @Test
     public void checkSearchButton() {
         HomePage homePage = new HomePage(getDriver());
@@ -18,7 +20,7 @@ public class HomePageTest extends AbstractTest {
     }
 
 
-    @Test
+
     public SearchInsight clickSearchButton() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -26,42 +28,62 @@ public class HomePageTest extends AbstractTest {
         return searchInsight;
     }
 
+    // Works
     @Test
     public void typeSearchTest() {
-        SearchInsight searchInsight = clickSearchButton();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        SearchInsight searchInsight = homePage.PopUpSearch();
         searchInsight.typeInSearchArea("Iphone");
-
     }
 
+
+    // Works
     @Test
     public void openQuickLinkToAppleStoreFAQ() {
-        SearchInsight searchInsight = clickSearchButton();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        SearchInsight searchInsight = homePage.PopUpSearch();
         searchInsight.openLinkToAppleStoreFAQ();
     }
 
+    // Works
     @Test
     public void openQuickLinkToGiftCards() {
-        SearchInsight searchInsight = clickSearchButton();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        SearchInsight searchInsight = homePage.PopUpSearch();
         searchInsight.openLinkToGiftCards();
     }
 
+
+    // Works
     @Test
     public void openQuickLinkToAppleCare() {
-        SearchInsight searchInsight = clickSearchButton();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        SearchInsight searchInsight = homePage.PopUpSearch();
         searchInsight.openLinkToAppleCare();
     }
 
+    // Works
     @Test
     public void openQuickLinkToAirTag() {
-        SearchInsight searchInsight = clickSearchButton();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        SearchInsight searchInsight = homePage.PopUpSearch();
         searchInsight.openLinkToAirTag();
     }
 
     @Test
     public void openQuickLinkToAirPods() {
-        SearchInsight searchInsight = clickSearchButton();
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        SearchInsight searchInsight = homePage.PopUpSearch();
         searchInsight.openLinkToAirPods();
     }
+
+
 
 
 }

@@ -1,6 +1,7 @@
 package com.qaprosoft.carina.demo.gui.testPages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
+import com.qaprosoft.carina.core.foundation.webdriver.locator.ExtendedFindBy;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import com.qaprosoft.carina.demo.gui.testPages.products.AppleProducts;
 import com.qaprosoft.carina.demo.gui.testPages.quickLinks.*;

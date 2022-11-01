@@ -34,6 +34,12 @@ public class SearchInsight extends AbstractPage {
     }
 
 
+
+
+    public boolean checkSearchButton() {
+        return searchButton.isElementPresent();
+    }
+
     public void typeInSearchArea(String name) {
         searchArea.type(name);
         searchButton.click();

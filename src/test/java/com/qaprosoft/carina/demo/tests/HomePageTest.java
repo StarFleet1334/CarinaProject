@@ -3,6 +3,8 @@ package com.qaprosoft.carina.demo.tests;
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.qaprosoft.carina.demo.gui.testPages.HomePage;
 import com.qaprosoft.carina.demo.gui.testPages.SearchInsight;
+import com.qaprosoft.carina.demo.gui.testPages.products.AppleProducts;
+import com.qaprosoft.carina.demo.gui.testPages.quickLinks.*;
 import org.testng.annotations.Test;
 
 
@@ -34,7 +36,7 @@ public class HomePageTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         SearchInsight searchInsight = homePage.PopUpSearch();
-        searchInsight.typeInSearchArea("Iphone");
+        searchInsight.typeInSearchArea(AppleProducts.IPAD);
     }
 
 
@@ -44,7 +46,8 @@ public class HomePageTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         SearchInsight searchInsight = homePage.PopUpSearch();
-        searchInsight.openLinkToAppleStoreFAQ();
+        AppleStoreFAQ appleStoreFAQ = searchInsight.openLinkToAppleStoreFAQ();
+        assertTrue(appleStoreFAQ.isTopicBarLoaded(),"AppleStoreFAQ Bar Not Present.");
     }
 
     // Works
@@ -53,7 +56,8 @@ public class HomePageTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         SearchInsight searchInsight = homePage.PopUpSearch();
-        searchInsight.openLinkToGiftCards();
+        GiftCards giftCards = searchInsight.openLinkToGiftCards();
+        assertTrue(giftCards.isNavBarLoaded(),"GiftCards Nav bar is not Present.");
     }
 
 
@@ -63,7 +67,8 @@ public class HomePageTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         SearchInsight searchInsight = homePage.PopUpSearch();
-        searchInsight.openLinkToAppleCare();
+        AppleCare appleCare = searchInsight.openLinkToAppleCare();
+        assertTrue(appleCare.isAppleCareNavBarLoaded(),"AppleCare Nav bar is not Present.");
     }
 
     // Works
@@ -72,7 +77,8 @@ public class HomePageTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         SearchInsight searchInsight = homePage.PopUpSearch();
-        searchInsight.openLinkToAirTag();
+        AirTag airTag = searchInsight.openLinkToAirTag();
+        assertTrue(airTag.isAirTagNavBarLoaded(),"AirTag Nav bar is not Present.");
     }
 
     @Test
@@ -80,7 +86,8 @@ public class HomePageTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         SearchInsight searchInsight = homePage.PopUpSearch();
-        searchInsight.openLinkToAirPods();
+        AirPods airPods = searchInsight.openLinkToAirPods();
+        assertTrue(airPods.isAirPodsNavBarLoaded(),"AirPods Nav bar is not Present.");
     }
 
 

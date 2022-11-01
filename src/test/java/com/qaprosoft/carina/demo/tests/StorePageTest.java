@@ -2,7 +2,13 @@ package com.qaprosoft.carina.demo.tests;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.qaprosoft.carina.demo.gui.testPages.StorePage;
+import com.qaprosoft.carina.demo.gui.testPages.products.AppleWatch;
+import com.qaprosoft.carina.demo.gui.testPages.products.Ipad;
+import com.qaprosoft.carina.demo.gui.testPages.products.Iphone;
+import com.qaprosoft.carina.demo.gui.testPages.products.MacBook;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertTrue;
 
 public class StorePageTest extends AbstractTest {
 
@@ -12,7 +18,8 @@ public class StorePageTest extends AbstractTest {
     public void checkMacPage() {
         StorePage storePage = new StorePage(getDriver());
         storePage.open();
-        storePage.clickMacPage();
+        MacBook macBook = storePage.clickMacPage();
+        assertTrue(macBook.isMacBookTagPresent(),"MacBook Tag is no Present.");
     }
 
     // Works
@@ -20,7 +27,8 @@ public class StorePageTest extends AbstractTest {
     public void checkIphonePage() {
         StorePage storePage = new StorePage(getDriver());
         storePage.open();
-        storePage.clickIphonePage();
+        Iphone iphone = storePage.clickIphonePage();
+        assertTrue(iphone.isIphoneTagPresent(),"Iphone Tag is no Present.");
     }
 
     // Works
@@ -28,7 +36,8 @@ public class StorePageTest extends AbstractTest {
     public void checkAppleWatchPage() {
         StorePage storePage = new StorePage(getDriver());
         storePage.open();
-        storePage.clickAppleWatchPage();
+        AppleWatch appleWatch = storePage.clickAppleWatchPage();
+        assertTrue(appleWatch.isAppleWatchTagPresent(),"AppleWatch Tag is no Present.");
     }
 
     // Works
@@ -36,6 +45,7 @@ public class StorePageTest extends AbstractTest {
     public void checkIpadPage() {
         StorePage storePage = new StorePage(getDriver());
         storePage.open();
-        storePage.clickIpadPage();
+        Ipad ipad = storePage.clickIpadPage();
+        assertTrue(ipad.isIpadTagPresent(),"Ipad Tag is no Present.");
     }
 }

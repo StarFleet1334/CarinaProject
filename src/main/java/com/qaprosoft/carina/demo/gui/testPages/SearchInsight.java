@@ -2,6 +2,7 @@ package com.qaprosoft.carina.demo.gui.testPages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.qaprosoft.carina.demo.gui.testPages.products.AppleProducts;
 import com.qaprosoft.carina.demo.gui.testPages.quickLinks.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -34,14 +35,8 @@ public class SearchInsight extends AbstractPage {
     }
 
 
-
-
-    public boolean checkSearchButton() {
-        return searchButton.isElementPresent();
-    }
-
-    public void typeInSearchArea(String name) {
-        searchArea.type(name);
+    public void typeInSearchArea(AppleProducts product) {
+        searchArea.type(product.getName());
         searchButton.click();
     }
 

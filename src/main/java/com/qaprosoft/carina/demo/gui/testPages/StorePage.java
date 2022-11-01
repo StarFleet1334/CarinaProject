@@ -2,6 +2,10 @@ package com.qaprosoft.carina.demo.gui.testPages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.qaprosoft.carina.demo.gui.testPages.products.AppleWatch;
+import com.qaprosoft.carina.demo.gui.testPages.products.Ipad;
+import com.qaprosoft.carina.demo.gui.testPages.products.Iphone;
+import com.qaprosoft.carina.demo.gui.testPages.products.MacBook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -25,23 +29,27 @@ public class StorePage extends AbstractPage {
         setPageURL("https://www.apple.com/store");
     }
 
-    public void clickMacPage() {
+    public MacBook clickMacPage() {
         macPage.click();
+        return new MacBook(getDriver());
     }
 
 
-    public void clickIphonePage() {
+    public Iphone clickIphonePage() {
         iphonePage.click();
+        return new Iphone(getDriver());
     }
 
 
-    public void clickIpadPage() {
+    public Ipad clickIpadPage() {
         iPadPage.click();
+        return new Ipad(getDriver());
     }
 
 
-    public void clickAppleWatchPage() {
+    public AppleWatch clickAppleWatchPage() {
         appleWatchPage.click();
+        return new AppleWatch(getDriver());
     }
 
 

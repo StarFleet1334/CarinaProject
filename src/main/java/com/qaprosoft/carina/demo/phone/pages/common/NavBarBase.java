@@ -3,10 +3,8 @@ package com.qaprosoft.carina.demo.phone.pages.common;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 
-public abstract class CarinaPageBase extends AbstractPage {
-    public CarinaPageBase(WebDriver driver) {
+public class NavBarBase extends AbstractPage {
+    public NavBarBase(WebDriver driver) {
         super(driver);
     }
-
-    public abstract NavBarBase navBarView();
 }

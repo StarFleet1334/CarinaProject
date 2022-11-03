@@ -2,7 +2,7 @@ package com.qaprosoft.carina.demo.phone.pages.ios;
 
 import com.qaprosoft.carina.core.foundation.utils.factory.DeviceType;
 import com.qaprosoft.carina.demo.phone.pages.common.CarinaPageBase;
-import com.qaprosoft.carina.demo.phone.pages.common.NavBarBase;
+import com.qaprosoft.carina.demo.phone.pages.common.NavBarPageBase;
 import org.openqa.selenium.WebDriver;
 
 @DeviceType(pageType = DeviceType.Type.IOS_PHONE,parentClass = CarinaPageBase.class)
@@ -13,7 +13,7 @@ public class CarinaPage extends CarinaPageBase {
     }
 
     @Override
-    public NavBarBase navBarView() {
+    public NavBarPageBase navBarView() {
         return null;
     }
 

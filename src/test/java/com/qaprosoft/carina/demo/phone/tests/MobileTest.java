@@ -20,6 +20,8 @@ public class MobileTest extends AbstractTest {
         loginPageBase.checkPrivacyBox();
         CarinaPageBase carinaPageBase = loginPageBase.clickLoginButton();
         assertTrue(carinaPageBase.isPageOpened(),"Caring Page Content is not Present.");
-        NavBarBase navBarBase = carinaPageBase.navBarView();
+        NavBarPageBase navBarBase = carinaPageBase.navBarView();
+        UIElementPageBase uiElementPageBase = navBarBase.viewUiElements();
+        assertTrue(uiElementPageBase.isPageOpened(),"UIElement Page Content is not Present.");
     }
 }
